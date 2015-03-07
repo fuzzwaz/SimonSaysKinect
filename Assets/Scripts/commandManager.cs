@@ -6,13 +6,16 @@ public class commandManager : MonoBehaviour {
 
 	int commandSize;
 	float timer = 0.0f;
+	public string playerLabel; 
 	public Text playerInstruction;
 	public GameObject[] commands;
 	public GameObject pointManager;
+	public bool playing = true;
 
 
 	// Use this for initialization
 	void Start () {
+		playing = true;
 		commandSize = commands.Length;
 		if (pointManager == null)
 		{pointManager = GameObject.Find("Point_Manager");}
@@ -30,19 +33,23 @@ public class commandManager : MonoBehaviour {
 		if (Input.GetKeyDown(KeyCode.I))
 		{pointManager.GetComponent<pointManager>().IncorrectPlayerInput();}
 
-		timer += Time.deltaTime;
-
-		if (timer > 10.0f)
-		{
-			timer = 0;
+		if (playing == false) {
+			timer += Time.deltaTime;
+		}
+		if (timer > 5.0f) {
+			playing = true;
+			timer = 0.0f;
 			GiveInstruction();
 		}
+
+
 	}
 
 	public void GiveInstruction ()
 	{
-		int instructionNum = Random.Range (0,commandSize - 1);
+		int instructionNum = Random.Range (0,commandSize);
 		playerInstruction.color = Color.magenta;
+		playerLabel = commands [instructionNum].GetComponent<commandVariables> ().name;
 		playerInstruction.text = commands[instructionNum].GetComponent<commandVariables>().displayText;
 
 	}

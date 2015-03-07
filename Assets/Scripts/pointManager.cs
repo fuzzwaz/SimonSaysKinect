@@ -7,6 +7,7 @@ public class pointManager : MonoBehaviour {
 	
 	public Text playerPoints;
 	public Text playerInstruction;
+	public GameObject commandManager;
 	// Use this for initialization
 	void Start () {
 		playerPoints.text = "0";
@@ -19,6 +20,7 @@ public class pointManager : MonoBehaviour {
 
 	public void CorrectPlayerInput()
 	{
+		commandManager.GetComponent<commandManager> ().playing = false;
 		playerPoints.text = ((int.Parse (playerPoints.text)) + 10).ToString();
 		playerInstruction.color = Color.green;
 		playerInstruction.text = "Nice Job!";

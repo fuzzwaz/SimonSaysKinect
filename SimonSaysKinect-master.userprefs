@@ -1,0 +1,17 @@
+﻿<Properties>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\touchHead.cs">
+    <Files>
+      <File FileName="Assets\Scripts\commandManager.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\touchHead.cs" Line="26" Column="86" />
+      <File FileName="Assets\ZigFu\Scripts\UserControls\ZigSkeleton.cs" Line="1" Column="1" />
+      <File FileName="Assets\ZigFu\Scripts\UserControls\ZigHandRaiseDetector.cs" Line="1" Column="1" />
+      <File FileName="Assets\ZigFu\Scripts\UserEngagers\ZigEngageSingleUser.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\pointManager.cs" Line="1" Column="1" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+</Properties>
