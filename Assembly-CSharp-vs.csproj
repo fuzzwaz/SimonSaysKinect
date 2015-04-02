@@ -46,8 +46,13 @@
 	</Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\Scripts\ElevatorButton.cs" />
+     <Compile Include="Assets\Scripts\HandColliderKnights.cs" />
+     <Compile Include="Assets\Scripts\Knight.cs" />
+     <Compile Include="Assets\Scripts\Spawner.cs" />
      <Compile Include="Assets\Scripts\commandManager.cs" />
      <Compile Include="Assets\Scripts\commandVariables.cs" />
+     <Compile Include="Assets\Scripts\leftRightKnightMove.cs" />
      <Compile Include="Assets\Scripts\playScript.cs" />
      <Compile Include="Assets\Scripts\pointManager.cs" />
      <Compile Include="Assets\Scripts\touchHead.cs" />
