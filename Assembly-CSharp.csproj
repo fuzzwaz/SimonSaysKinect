@@ -5,7 +5,7 @@
 	<Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
 	<ProductVersion>10.0.20506</ProductVersion>
 	<SchemaVersion>2.0</SchemaVersion>
-	<ProjectGuid>{AD74241C-5E36-203B-3A87-6BD0D03E4D3F}</ProjectGuid>
+	<ProjectGuid>{45E6BCC5-FC25-8F17-EA4F-BBC54CDBC784}</ProjectGuid>
 	<OutputType>Library</OutputType>
 	<AppDesignerFolder>Properties</AppDesignerFolder>
 	<RootNamespace></RootNamespace>
@@ -47,12 +47,14 @@
   </ItemGroup>
   <ItemGroup>
      <Compile Include="Assets\Scripts\ElevatorButton.cs" />
+     <Compile Include="Assets\Scripts\HandColliderElevator.cs" />
      <Compile Include="Assets\Scripts\HandColliderKnights.cs" />
+     <Compile Include="Assets\Scripts\InstructionHandler.cs" />
      <Compile Include="Assets\Scripts\Knight.cs" />
+     <Compile Include="Assets\Scripts\RoundHandler.cs" />
      <Compile Include="Assets\Scripts\Spawner.cs" />
      <Compile Include="Assets\Scripts\commandManager.cs" />
      <Compile Include="Assets\Scripts\commandVariables.cs" />
-     <Compile Include="Assets\Scripts\leftRightKnightMove.cs" />
      <Compile Include="Assets\Scripts\playScript.cs" />
      <Compile Include="Assets\Scripts\pointManager.cs" />
      <Compile Include="Assets\Scripts\touchHead.cs" />
@@ -89,17 +91,17 @@
  <HintPath>C:/Program Files (x86)/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/4.6.2/UnityEngine.UI.dll</HintPath>
  </Reference>
  <Reference Include="OpenNI.Net">
- <HintPath>C:/Users/David/Documents/Unity Projects/SimonSaysKinect-master/Assets/ZigFu/Scripts/_Internal/OpenNI.Net.dll</HintPath>
+ <HintPath>C:/Users/David/Documents/Unity Projects/SimonSaysKinect/Assets/ZigFu/Scripts/_Internal/OpenNI.Net.dll</HintPath>
  </Reference>
  <Reference Include="ZDK">
- <HintPath>C:/Users/David/Documents/Unity Projects/SimonSaysKinect-master/Assets/ZigFu/Scripts/_Internal/ZDK.dll</HintPath>
+ <HintPath>C:/Users/David/Documents/Unity Projects/SimonSaysKinect/Assets/ZigFu/Scripts/_Internal/ZDK.dll</HintPath>
  </Reference>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="Assembly-CSharp-firstpass.csproj">
-      <Project>{2A571A8C-63F3-0DFD-9B38-A581D89CF2E7}</Project>      <Name>Assembly-CSharp-firstpass</Name>    </ProjectReference>
+      <Project>{F549BD9F-BAEC-CE0B-500C-8777C41CE85C}</Project>      <Name>Assembly-CSharp-firstpass</Name>    </ProjectReference>
     <ProjectReference Include="Assembly-UnityScript-firstpass.unityproj">
-      <Project>{060539B9-B661-8475-4F76-819CEF4555BA}</Project>      <Name>Assembly-UnityScript-firstpass</Name>    </ProjectReference>
+      <Project>{5CFB479D-82A5-0C82-786D-9C6A25B14451}</Project>      <Name>Assembly-UnityScript-firstpass</Name>    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

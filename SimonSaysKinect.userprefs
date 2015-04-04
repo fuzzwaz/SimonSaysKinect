@@ -1,11 +1,14 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/playScript.cs">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\RoundHandler.cs">
     <Files>
-      <File FileName="Assets/Scripts/pointManager.cs" Line="24" Column="40" />
-      <File FileName="Assets/Scripts/playScript.cs" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/commandManager.cs" Line="8" Column="21" />
-      <File FileName="Assets/Scripts/commandVariables.cs" Line="9" Column="28" />
+      <File FileName="Assets\Scripts\InstructionHandler.cs" Line="51" Column="16" />
+      <File FileName="Assets\Scripts\ElevatorButton.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\commandVariables.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\HandColliderElevator.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\touchHead.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\HandColliderKnights.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\RoundHandler.cs" Line="10" Column="54" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

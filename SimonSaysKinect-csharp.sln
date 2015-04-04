@@ -1,6 +1,8 @@
 Microsoft Visual Studio Solution File, Format Version 11.00
 # Visual Studio 2008
 
+Project("{A38D3B39-AB5C-2198-EA3E-6DDD5FAD537F}") = "SimonSaysKinect", "Assembly-CSharp-firstpass-vs.csproj", "{F549BD9F-BAEC-CE0B-500C-8777C41CE85C}"
+EndProject
 Project("{A38D3B39-AB5C-2198-EA3E-6DDD5FAD537F}") = "SimonSaysKinect", "Assembly-CSharp-vs.csproj", "{45E6BCC5-FC25-8F17-EA4F-BBC54CDBC784}"
 EndProject
 Project("{A38D3B39-AB5C-2198-EA3E-6DDD5FAD537F}") = "SimonSaysKinect", "Assembly-CSharp-Editor-vs.csproj", "{1F70EFD3-4184-0CB7-80B9-049B7B41F655}"
@@ -11,6 +13,10 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F549BD9F-BAEC-CE0B-500C-8777C41CE85C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F549BD9F-BAEC-CE0B-500C-8777C41CE85C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F549BD9F-BAEC-CE0B-500C-8777C41CE85C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F549BD9F-BAEC-CE0B-500C-8777C41CE85C}.Release|Any CPU.Build.0 = Release|Any CPU
 		{45E6BCC5-FC25-8F17-EA4F-BBC54CDBC784}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{45E6BCC5-FC25-8F17-EA4F-BBC54CDBC784}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{45E6BCC5-FC25-8F17-EA4F-BBC54CDBC784}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -23,7 +29,7 @@ Global
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
-													GlobalSection(MonoDevelopProperties) = preSolution
+																										GlobalSection(MonoDevelopProperties) = preSolution
 		StartupItem = Assembly-CSharp.csproj
 		Policies = $0
 		$0.TextStylePolicy = $1

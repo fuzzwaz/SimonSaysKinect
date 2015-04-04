@@ -19,7 +19,7 @@ public class touchHead : MonoBehaviour {
 		rightHandPosition = carlMan.GetComponent<ZigSkeleton> ().LeftWrist;
 		leftHandPosition = carlMan.GetComponent<ZigSkeleton> ().RightWrist;
 		headPosition = carlMan.GetComponent<ZigSkeleton> ().Head;
-		print (Vector3.Distance(rightHandPosition.position,headPosition.position));
+//		print (Vector3.Distance(rightHandPosition.position,headPosition.position));
 
 
 		if (commandManager.GetComponent<commandManager> ().playerLabel == "TouchYourHeadR") {
