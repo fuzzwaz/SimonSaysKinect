@@ -7,7 +7,7 @@ public class Knight : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		rigidbody.AddForce (force);
+		GetComponent<Rigidbody>().AddForce (force);
 	}
 	
 	// Update is called once per frame

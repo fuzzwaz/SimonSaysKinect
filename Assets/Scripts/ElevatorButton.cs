@@ -21,13 +21,13 @@ public class ElevatorButton : MonoBehaviour {
 
 	public void NextRound(){
 		pushed = false;
-		renderer.material = originalMat;
+		GetComponent<Renderer>().material = originalMat;
 	}
 
 	void OnTriggerEnter (Collider collider) {
 		//if (collider.gameObject.tag == "Hand") {
 			pushed = true;
-			renderer.material = pushedMat;
+			GetComponent<Renderer>().material = pushedMat;
 		//}
 	}
 }

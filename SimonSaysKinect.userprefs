@@ -1,14 +1,8 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\RoundHandler.cs">
+  <MonoDevelop.Ide.Workspace />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Standard Assets\Scripts\Utility Scripts\MeshCombineUtility.cs">
     <Files>
-      <File FileName="Assets\Scripts\InstructionHandler.cs" Line="51" Column="16" />
-      <File FileName="Assets\Scripts\ElevatorButton.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\commandVariables.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\HandColliderElevator.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\touchHead.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\HandColliderKnights.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\RoundHandler.cs" Line="10" Column="54" />
+      <File FileName="Assets\Standard Assets\Scripts\Utility Scripts\MeshCombineUtility.cs" Line="177" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
