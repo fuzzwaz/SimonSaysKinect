@@ -6,7 +6,8 @@ public class InstructionHandler : MonoBehaviour {
 
 	//The Instruction Handler determines the overall correct sequence of 5 colors that the player will
 	//		need to press during the game. It sets these colors onto the actual InstructionShape 
-	//		gameobjects that show up on the bottom of the screen for the player.
+	//		gameobjects that show up on the bottom of the screen for the player to know what they will
+	//		need to press.
 	//It also manages the different "phases" of each round by handling when the InstructionShapes will
 	//		appear for the player and when the player can interact with buttons using the handColliders.
 
@@ -24,7 +25,7 @@ public class InstructionHandler : MonoBehaviour {
 	public GameObject handColliderR;
 	public GameObject handColliderL;
 
-	int currentRound;
+	public int currentRound;
 	int maxRound;
 	//This array holds the correct overall sequence of 5 colors that will be used during
 	// 		 the whole game. The Instruction Handler will set these values. (ALSO IN ROUNDHANDLER)
@@ -73,7 +74,7 @@ public class InstructionHandler : MonoBehaviour {
 		//Tell the Round Handler the correct button order
 		roundHandler.GetComponent<RoundHandler> ().correctButtonOrder = correctButtonOrder;
 		//Start the first round
-		roundHandler.GetComponent<RoundHandler> ().StartRound (true);
+		roundHandler.GetComponent<RoundHandler> ().StartRound (false);
 	}
 	
 	// Update is called once per frame

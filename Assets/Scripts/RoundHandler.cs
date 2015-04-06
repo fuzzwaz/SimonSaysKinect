@@ -8,7 +8,7 @@ public class RoundHandler : MonoBehaviour {
 	//It keeps track of the correct sequence of buttons to be pressed 
 	//		for each round. 
 
-	int currentRound;
+	int curRound;
 	public InstructionHandler instructionHandler;
 	//This array holds the correct overall sequence of 5 colors that will be used during
 	// 		 the whole game. The Instruction Handler will set these values.
@@ -21,7 +21,7 @@ public class RoundHandler : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		currentRound = 0;
+
 	}
 	
 	// Update is called once per frame
@@ -33,19 +33,22 @@ public class RoundHandler : MonoBehaviour {
 	//"restartingTheRound" is true if the player has to redo a round because of failure
 	//		and false if the player is starting a new round for the first time. 
 	public void StartRound(bool restartingTheRound){
+		curRound = instructionHandler.GetComponent<InstructionHandler> ().currentRound;
 		//if you are restarting a round, clear the queue
 		if (restartingTheRound) {
 			currentRoundCorrectButtonOrder.Clear();
 		}
-		//if you are starting a new round, increase the currentRound and make sure the queue is clear.
+		//if you are starting a new round, increase the curRound and make sure the queue is clear.
 		else {
-			currentRound++;
+			curRound++;
 			if (currentRoundCorrectButtonOrder.Count != 0) {
 				print ("error");
 			}
 		}
 		//Add the correct sequence of buttons for this round to the queue
-		for (int i = 0; i < currentRound; i++) {
+		for (int i = 0; i <= curRound; i++) {
+			print ("inforloop");
+			print (curRound);
 			currentRoundCorrectButtonOrder.Enqueue (correctButtonOrder [i]);
 		}
 		//Tell the Instruction Handler to do what it should at the start of a round
