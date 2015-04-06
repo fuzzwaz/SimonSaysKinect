@@ -51,6 +51,10 @@ public class commandManager : MonoBehaviour {
 		playerInstruction.color = Color.magenta;
 		playerLabel = commands [instructionNum].GetComponent<commandVariables> ().name;
 		playerInstruction.text = commands[instructionNum].GetComponent<commandVariables>().displayText;
+		Invoke ("TakeAwayInstruction", 8f);
+	}
 
+	public void TakeAwayInstruction(){
+		playerInstruction.text = "";
 	}
 }

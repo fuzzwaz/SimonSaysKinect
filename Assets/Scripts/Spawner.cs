@@ -6,16 +6,15 @@ public class Spawner : MonoBehaviour {
 	public Rigidbody knight;
 	public int direction;
 	public Vector3 dirVector;
-	enum directionEnum{up, down, left, right};
 
 	// Use this for initialization
 	void Start () {
 		Vector3[] dirVectors = new Vector3[4];
-		float forceVelocity = Random.Range (150, 500);
-		dirVectors [(int)directionEnum.up] = new Vector3 (0, forceVelocity, 0);
-		dirVectors [(int)directionEnum.down] = new Vector3 (0, -forceVelocity, 0);
-		dirVectors [(int)directionEnum.left] = new Vector3 (-forceVelocity, 0, 0);
-		dirVectors [(int)directionEnum.right] = new Vector3 (forceVelocity, 0, 0);
+		float forceVelocity = Random.Range (150, 300);
+		dirVectors [0] = new Vector3 (0, forceVelocity, 0);
+		dirVectors [1] = new Vector3 (0, -forceVelocity, 0);
+		dirVectors [2] = new Vector3 (-forceVelocity, 0, 0);
+		dirVectors [3] = new Vector3 (forceVelocity, 0, 0);
 		dirVector = dirVectors [direction];
 		InvokeRepeating ("LaunchKnight", Random.Range (2, 4), Random.Range (3, 5));
 	}
@@ -26,7 +25,13 @@ public class Spawner : MonoBehaviour {
 	}
 
 	void LaunchKnight () {
-		Rigidbody startKnight = (Rigidbody) Instantiate (knight, transform.position, Quaternion.identity);
+		Vector3 launchPosition = transform.position;
+		if (direction <= 1) {
+			launchPosition.x = launchPosition.x + Random.Range (-9, 9);
+		} else {
+			launchPosition.y = launchPosition.y + Random.Range (-3.5f, 5.5f);
+		}
+		Rigidbody startKnight = (Rigidbody) Instantiate (knight, launchPosition, Quaternion.identity);
 		startKnight.GetComponent<Knight> ().force = dirVector;
 		Destroy (startKnight.gameObject, 50);
 	}
