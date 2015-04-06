@@ -15,9 +15,13 @@ public class HandColliderKnights : MonoBehaviour {
 	void Update () {
 
 		if (rightLeft == "R") {
-			transform.position = carlMan.GetComponent<ZigSkeleton> ().LeftWrist.position;
+			Vector3 myVec = carlMan.GetComponent<ZigSkeleton> ().RightWrist.position;
+			myVec.z = -6.96f;
+			transform.position = myVec;
 		} else if (rightLeft == "L") {
-			transform.position = carlMan.GetComponent<ZigSkeleton> ().RightWrist.position;
+			Vector3 myVec = carlMan.GetComponent<ZigSkeleton> ().LeftWrist.position;
+			myVec.z = -6.96f;
+			transform.position = myVec;
 		}
 	}
 

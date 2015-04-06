@@ -15,9 +15,17 @@ public class HandColliderElevator : MonoBehaviour {
 	void Update () {
 
 		if (rightLeft == "R") {
-			transform.position = carlMan.GetComponent<ZigSkeleton> ().LeftWrist.position;
+			Vector3 myVec = carlMan.GetComponent<ZigSkeleton> ().LeftWrist.position;
+			myVec.x = myVec.x*8f;
+			myVec.y = myVec.y*3f;
+			myVec.z = 0;
+			transform.position = myVec;
 		} else if (rightLeft == "L") {
-			transform.position = carlMan.GetComponent<ZigSkeleton> ().RightWrist.position;
+			Vector3 myVec = carlMan.GetComponent<ZigSkeleton> ().RightWrist.position;
+			myVec.x = myVec.x*8f;
+			myVec.y = myVec.y*3f;
+			myVec.z = 0;
+			transform.position = myVec;
 		}
 	}
 

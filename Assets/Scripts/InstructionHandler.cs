@@ -58,7 +58,7 @@ public class InstructionHandler : MonoBehaviour {
 		}
 	}
 
-	void NextRound(){
+	public void NextRound(){
 		currentRound++;
 		if (currentRound == 2) {
 			instructionShapes[1].SetActive (true);
@@ -80,6 +80,5 @@ public class InstructionHandler : MonoBehaviour {
 		buttons[2].GetComponent<ElevatorButton> ().NextRound ();
 		buttons[3].GetComponent<ElevatorButton> ().NextRound ();
 		buttons[4].GetComponent<ElevatorButton> ().NextRound ();
-		roundHandler.GetComponent<RoundHandler> ().NextRound ();
 	}
 }

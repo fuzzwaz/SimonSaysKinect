@@ -12,6 +12,6 @@ public class Knight : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-	
+
 	}
 }

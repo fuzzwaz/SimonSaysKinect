@@ -8,6 +8,7 @@ public class ElevatorButton : MonoBehaviour {
 	public string shape;
 	public Material originalMat;
 	public Material pushedMat;
+	public RoundHandler roundHandler;
 
 	// Use this for initialization
 	void Start () {
@@ -28,6 +29,19 @@ public class ElevatorButton : MonoBehaviour {
 		//if (collider.gameObject.tag == "Hand") {
 			pushed = true;
 			GetComponent<Renderer>().material = pushedMat;
+			string nextButton = roundHandler.GetComponent<RoundHandler>().currentRoundQueue.Dequeue();
+			if (nextButton == color) {
+				print ("correct!");
+				if(roundHandler.GetComponent<RoundHandler>().currentRoundQueue.Count == 0){
+					roundHandler.GetComponent<RoundHandler>().NextRound();
+				}
+			} else {
+				print ("wrong!!!");
+			}
 		//}
+	}
+
+	void OnCollisionEnter (Collision col){
+		print ("Hello");
 	}
 }
