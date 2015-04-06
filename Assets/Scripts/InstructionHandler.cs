@@ -1,4 +1,4 @@
-﻿using UnityEngine;
+﻿ using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
 
@@ -24,6 +24,8 @@ public class InstructionHandler : MonoBehaviour {
 	//These are references to the hand colliders in the game.
 	public GameObject handColliderR;
 	public GameObject handColliderL;
+	public playScript playScript;
+	public GameObject userProfile;
 
 	public int currentRound;
 	int maxRound;
@@ -90,9 +92,6 @@ public class InstructionHandler : MonoBehaviour {
 		//If this is a new round, increment currentRound
 		if (!restartingTheRound) {
 			currentRound++;
-			if (currentRound > maxRound) {
-				print ("END GAME");
-			}
 		}
 		//SetActive displays a gameobject in the scene and lets the player use it.
 		//This loop sets the correct number of InstructionShapes as active for the current round.
@@ -129,13 +128,19 @@ public class InstructionHandler : MonoBehaviour {
 
 	//This function turns off the instructions and turns on the handColliders so that the player
 	//		can start pressing buttons
-	void TurnOffInstructions(){
+	void TurnOffInstructions() {
 		//Turn off all instructions
-		for(int i = 0; i < 5; i++){
+		for (int i = 0; i < 5; i++) {
 			instructionShapes[i].SetActive(false);
 		}
 		//Turn on handColliders
-		handColliderR.SetActive (true);
-		handColliderL.SetActive (true);
+		
+		userProfile = GameObject.Find("User_Profile");
+		if (userProfile.GetComponent<userProfile>().right_hand == true) {
+			handColliderR.SetActive (true);
+		}
+		if (userProfile.GetComponent<userProfile>().left_hand == true) {
+			handColliderL.SetActive (true);
+		}
 	}
 }

@@ -5,10 +5,12 @@ public class HandColliderKnights : MonoBehaviour {
 	
 	public GameObject carlMan;
 	public string rightLeft;
+	public GameObject userProfile;
 
 	// Use this for initialization
 	void Start () {
-	
+		gameObject.SetActive (false);
+		Invoke ("TurnOnHands", 0.1f);
 	}
 	
 	// Update is called once per frame
@@ -30,6 +32,19 @@ public class HandColliderKnights : MonoBehaviour {
 			myVec.y = myVec.y*9f;
 			myVec.z = 0;
 			transform.position = myVec;
+		}
+	}
+	
+	void TurnOnHands() {
+		userProfile = GameObject.Find("User_Profile");
+		if (rightLeft == "R") {
+			if (userProfile.GetComponent<userProfile>().right_hand == true) {
+				gameObject.SetActive (true);
+			}
+		} else if (rightLeft == "L") {
+			if (userProfile.GetComponent<userProfile>().left_hand == true) {
+				gameObject.SetActive (true);
+			}
 		}
 	}
 

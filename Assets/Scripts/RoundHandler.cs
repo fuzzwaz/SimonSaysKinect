@@ -9,6 +9,7 @@ public class RoundHandler : MonoBehaviour {
 	//		for each round. 
 
 	int curRound;
+	int maxRound;
 	public InstructionHandler instructionHandler;
 	//This array holds the correct overall sequence of 5 colors that will be used during
 	// 		 the whole game. The Instruction Handler will set these values.
@@ -18,10 +19,11 @@ public class RoundHandler : MonoBehaviour {
 	//An empty queue means that the player has pressed every button for that round, and 
 	//		that the next round will begin. 
 	public Queue<string> currentRoundCorrectButtonOrder = new Queue<string>();
+	public playScript playScript;
 
 	// Use this for initialization
 	void Start () {
-
+		maxRound = 4;
 	}
 	
 	// Update is called once per frame
@@ -41,14 +43,15 @@ public class RoundHandler : MonoBehaviour {
 		//if you are starting a new round, increase the curRound and make sure the queue is clear.
 		else {
 			curRound++;
+			if (curRound > maxRound) {
+				playScript.GetComponent<playScript>().EndElevatorGame();
+			}
 			if (currentRoundCorrectButtonOrder.Count != 0) {
 				print ("error");
 			}
 		}
 		//Add the correct sequence of buttons for this round to the queue
 		for (int i = 0; i <= curRound; i++) {
-			print ("inforloop");
-			print (curRound);
 			currentRoundCorrectButtonOrder.Enqueue (correctButtonOrder [i]);
 		}
 		//Tell the Instruction Handler to do what it should at the start of a round
