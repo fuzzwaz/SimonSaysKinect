@@ -21,7 +21,7 @@ public class Knight : MonoBehaviour {
 	void OnCollisionEnter(Collision collision) {
 		if (collision.gameObject.tag == "GameEdge") {
 			if (!hitByPlayer) {
-				pointManager.GetComponent<gameManager> ().gamePoints += 25;
+				pointManager.GetComponent<gameManager> ().gamePoints += 20;
 			}
 			Destroy(gameObject);
 		}

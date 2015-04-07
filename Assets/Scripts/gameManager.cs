@@ -10,13 +10,16 @@ public class gameManager : MonoBehaviour {
 	public GameObject commandManager;
 	public int gamePoints;
 	public GameObject userProfile;
+	public bool paused;
+	public string[] gameNames = new string[2];
 
 	// Use this for initialization
 	void Start () {
+		paused = false;
 		userProfile = GameObject.Find("User_Profile");
 		gamePoints = userProfile.GetComponent<userProfile>().totalPoints;
 		playerPoints.text = gamePoints.ToString ();
-		Invoke("EndKnightGame", 20f);
+		Invoke("EndKnightGame", 30f);
 	}
 	
 	// Update is called once per frame
@@ -40,6 +43,10 @@ public class gameManager : MonoBehaviour {
 			Application.LoadLevel ("TitleScreen");
 			currentLevelName = "TitleScreen";
 		}
+	}
+
+	public void chooseGame() {
+		Application.LoadLevel (gameNames [Random.Range (0, 1)]);
 	}
 //
 //	public void CorrectPlayerInput()

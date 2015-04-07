@@ -105,24 +105,31 @@ public class InstructionHandler : MonoBehaviour {
 		}
 		//This code correctly sets the handColliders as not active during the phase of the game
 		//when the instructions are displayed to the player.
-		Vector3 myVec = handColliderR.transform.position;
-		myVec.y = 0;
-		handColliderR.transform.position = myVec;
-		handColliderR.SetActive (false);
-		myVec = handColliderL.transform.position;
-		myVec.y = 0;
-		handColliderL.transform.position = myVec;
-		handColliderL.SetActive (false);
+//		Vector3 myVec = handColliderR.transform.position;
+//		myVec.y = 0;
+//		handColliderR.transform.position = myVec;
+//		handColliderR.SetActive (false);
+//		myVec = handColliderL.transform.position;
+//		myVec.y = 0;
+//		handColliderL.transform.position = myVec;
+//		handColliderL.SetActive (false);
 
 		//Tells the Buttons to go back to being displayed in their original unpressed form.
-		buttons[0].GetComponent<ElevatorButton> ().ResetThisButton ();
-		buttons[1].GetComponent<ElevatorButton> ().ResetThisButton ();
-		buttons[2].GetComponent<ElevatorButton> ().ResetThisButton ();
-		buttons[3].GetComponent<ElevatorButton> ().ResetThisButton ();
-		buttons[4].GetComponent<ElevatorButton> ().ResetThisButton ();
+		buttons [0].GetComponent<ElevatorButton> ().ResetThisButton ();
+		buttons [1].GetComponent<ElevatorButton> ().ResetThisButton ();
+		buttons [2].GetComponent<ElevatorButton> ().ResetThisButton ();
+		buttons [3].GetComponent<ElevatorButton> ().ResetThisButton ();
+		buttons [4].GetComponent<ElevatorButton> ().ResetThisButton ();
 		//Invoke calls a function (first argument) after the specified amount of time (second argument)
 		//TurnOffInstructions is called 5 seconds from now so that the correct color sequence (aka the 
 		//		"instructions") can be displayed to the player for 5 seconds before it disappears.
+
+		buttons [0].gameObject.SetActive (false);
+		buttons [1].gameObject.SetActive (false);
+		buttons [2].gameObject.SetActive (false);
+		buttons [3].gameObject.SetActive (false);
+		buttons [4].gameObject.SetActive (false);
+
 		Invoke ("TurnOffInstructions", 5f);
 	}
 
@@ -133,14 +140,21 @@ public class InstructionHandler : MonoBehaviour {
 		for (int i = 0; i < 5; i++) {
 			instructionShapes[i].SetActive(false);
 		}
+		
+		buttons [0].gameObject.SetActive (true);
+		buttons [1].gameObject.SetActive (true);
+		buttons [2].gameObject.SetActive (true);
+		buttons [3].gameObject.SetActive (true);
+		buttons [4].gameObject.SetActive (true);
+
 		//Turn on handColliders
 		
-		userProfile = GameObject.Find("User_Profile");
-		if (userProfile.GetComponent<userProfile>().right_hand == true) {
-			handColliderR.SetActive (true);
-		}
-		if (userProfile.GetComponent<userProfile>().left_hand == true) {
-			handColliderL.SetActive (true);
-		}
+//		userProfile = GameObject.Find("User_Profile");
+//		if (userProfile.GetComponent<userProfile>().right_hand == true) {
+//			handColliderR.SetActive (true);
+//		}
+//		if (userProfile.GetComponent<userProfile>().left_hand == true) {
+//			handColliderL.SetActive (true);
+//		}
 	}
 }
