@@ -15,7 +15,7 @@ public class HandColliderElevator : MonoBehaviour {
 		noRightHand = false;
 		noLeftHand = false;
 		gameObject.SetActive (false);
-		Invoke ("TurnOnHands", 0.1f);
+		Invoke ("TurnOnHands", 10.2f);
 		//The handColliders are not active at the beginning of Elevator/Simon game.
 		//gameObject.SetActive (false);
 	}

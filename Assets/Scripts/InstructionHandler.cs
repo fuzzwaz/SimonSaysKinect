@@ -76,12 +76,17 @@ public class InstructionHandler : MonoBehaviour {
 		//Tell the Round Handler the correct button order
 		roundHandler.GetComponent<RoundHandler> ().correctButtonOrder = correctButtonOrder;
 		//Start the first round
-		roundHandler.GetComponent<RoundHandler> ().StartRound (false);
+		Invoke ("StartFirstRound", 9.8f);
 	}
 	
 	// Update is called once per frame
 	void Update () {
 
+	}
+
+	void StartFirstRound(){
+		//Start the first round
+		roundHandler.GetComponent<RoundHandler> ().StartRound (false);
 	}
 
 	//This function takes care of what should happen at the beginning of each round for the

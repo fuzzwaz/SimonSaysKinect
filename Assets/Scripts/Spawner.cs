@@ -17,7 +17,7 @@ public class Spawner : MonoBehaviour {
 		dirVectors [2] = new Vector3 (-forceVelocity, 0, 0);
 		dirVectors [3] = new Vector3 (forceVelocity, 0, 0);
 		dirVector = dirVectors [direction];
-		InvokeRepeating ("LaunchKnight", Random.Range (2, 4), Random.Range (3, 5));
+		InvokeRepeating ("LaunchKnight", Random.Range (12, 14), Random.Range (3, 5));
 	}
 	
 	// Update is called once per frame

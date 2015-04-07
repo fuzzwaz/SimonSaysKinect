@@ -39,7 +39,7 @@ public class gameManager : MonoBehaviour {
 	public void EndElevatorGame() {
 		if (currentLevelName == "MainLevel_Elevator") {
 			userProfile = GameObject.Find("User_Profile");
-			userProfile.GetComponent<userProfile>().totalPoints += gamePoints;
+			userProfile.GetComponent<userProfile>().totalPoints = 0;
 			Application.LoadLevel ("TitleScreen");
 			currentLevelName = "TitleScreen";
 		}

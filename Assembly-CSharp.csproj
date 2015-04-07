@@ -62,6 +62,7 @@
      <Compile Include="Assets\Scripts\playScript.cs" />
      <Compile Include="Assets\Scripts\quitScript.cs" />
      <Compile Include="Assets\Scripts\settingsScript.cs" />
+     <Compile Include="Assets\Scripts\slideSwap.cs" />
      <Compile Include="Assets\Scripts\touchHead.cs" />
      <Compile Include="Assets\Scripts\turnOff.cs" />
      <Compile Include="Assets\Scripts\updateSettings.cs" />
