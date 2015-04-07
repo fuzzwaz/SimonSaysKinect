@@ -16,22 +16,22 @@ public class touchHead : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		rightHandPosition = carlMan.GetComponent<ZigSkeleton> ().LeftWrist;
-		leftHandPosition = carlMan.GetComponent<ZigSkeleton> ().RightWrist;
-		headPosition = carlMan.GetComponent<ZigSkeleton> ().Head;
-//		print (Vector3.Distance(rightHandPosition.position,headPosition.position));
-
-
-		if (commandManager.GetComponent<commandManager> ().playerLabel == "TouchYourHeadR") {
-			if (Vector3.Distance (rightHandPosition.position, headPosition.position) <= 0.3f && commandManager.GetComponent<commandManager> ().playing) {
-				pointSystem.GetComponent<pointManager> ().CorrectPlayerInput ();
-			}
-		} 
-		else if (commandManager.GetComponent<commandManager> ().playerLabel == "TouchYourHeadL") 
-		{
-			if (Vector3.Distance (leftHandPosition.position, headPosition.position) <= 0.3f && commandManager.GetComponent<commandManager> ().playing) {
-				pointSystem.GetComponent<pointManager> ().CorrectPlayerInput ();
-			}
-		}
+//		rightHandPosition = carlMan.GetComponent<ZigSkeleton> ().LeftWrist;
+//		leftHandPosition = carlMan.GetComponent<ZigSkeleton> ().RightWrist;
+//		headPosition = carlMan.GetComponent<ZigSkeleton> ().Head;
+////		print (Vector3.Distance(rightHandPosition.position,headPosition.position));
+//
+//
+//		if (commandManager.GetComponent<commandManager> ().playerLabel == "TouchYourHeadR") {
+//			if (Vector3.Distance (rightHandPosition.position, headPosition.position) <= 0.3f && commandManager.GetComponent<commandManager> ().playing) {
+//				pointSystem.GetComponent<gameManager> ().CorrectPlayerInput ();
+//			}
+//		} 
+//		else if (commandManager.GetComponent<commandManager> ().playerLabel == "TouchYourHeadL") 
+//		{
+//			if (Vector3.Distance (leftHandPosition.position, headPosition.position) <= 0.3f && commandManager.GetComponent<commandManager> ().playing) {
+//				pointSystem.GetComponent<gameManager> ().CorrectPlayerInput ();
+//			}
+//		}
 	}
 }

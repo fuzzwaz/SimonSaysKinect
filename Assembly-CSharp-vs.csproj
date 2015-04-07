@@ -55,11 +55,11 @@
      <Compile Include="Assets\Scripts\Spawner.cs" />
      <Compile Include="Assets\Scripts\commandManager.cs" />
      <Compile Include="Assets\Scripts\commandVariables.cs" />
+     <Compile Include="Assets\Scripts\gameManager.cs" />
      <Compile Include="Assets\Scripts\gameStart.cs" />
      <Compile Include="Assets\Scripts\menuScript.cs" />
      <Compile Include="Assets\Scripts\on_off.cs" />
      <Compile Include="Assets\Scripts\playScript.cs" />
-     <Compile Include="Assets\Scripts\pointManager.cs" />
      <Compile Include="Assets\Scripts\quitScript.cs" />
      <Compile Include="Assets\Scripts\settingsScript.cs" />
      <Compile Include="Assets\Scripts\touchHead.cs" />

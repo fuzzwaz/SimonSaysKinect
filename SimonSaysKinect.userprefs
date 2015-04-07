@@ -1,14 +1,15 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\playScript.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\ElevatorButton.cs">
     <Files>
-      <File FileName="Assets\Scripts\updateSettings.cs" Line="22" Column="62" />
-      <File FileName="Assets\Scripts\HandColliderKnights.cs" Line="39" Column="49" />
-      <File FileName="Assets\Scripts\ElevatorButton.cs" Line="41" Column="11" />
-      <File FileName="Assets\Scripts\InstructionHandler.cs" Line="137" Column="3" />
-      <File FileName="Assets\Scripts\RoundHandler.cs" Line="54" Column="40" />
-      <File FileName="Assets\Scripts\commandManager.cs" Line="13" Column="29" />
-      <File FileName="Assets\Scripts\playScript.cs" Line="10" Column="29" />
+      <File FileName="Assets\Scripts\InstructionHandler.cs" Line="71" Column="44" />
+      <File FileName="Assets\Scripts\RoundHandler.cs" Line="41" Column="64" />
+      <File FileName="Assets\Scripts\gameManager.cs" Line="19" Column="32" />
+      <File FileName="Assets\Scripts\Knight.cs" Line="17" Column="18" />
+      <File FileName="Assets\Scripts\Spawner.cs" Line="37" Column="67" />
+      <File FileName="Assets\Scripts\HandColliderKnights.cs" Line="54" Column="38" />
+      <File FileName="Assets\Scripts\userProfile.cs" Line="6" Column="28" />
+      <File FileName="Assets\Scripts\ElevatorButton.cs" Line="52" Column="22" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

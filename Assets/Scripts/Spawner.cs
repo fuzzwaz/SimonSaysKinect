@@ -6,6 +6,7 @@ public class Spawner : MonoBehaviour {
 	public Rigidbody knight;
 	public int direction;
 	public Vector3 dirVector;
+	public gameManager pointManager;
 
 	// Use this for initialization
 	void Start () {
@@ -33,6 +34,6 @@ public class Spawner : MonoBehaviour {
 		}
 		Rigidbody startKnight = (Rigidbody) Instantiate (knight, launchPosition, Quaternion.identity);
 		startKnight.GetComponent<Knight> ().force = dirVector;
-		Destroy (startKnight.gameObject, 50);
+		startKnight.GetComponent<Knight> ().pointManager = pointManager;
 	}
 }

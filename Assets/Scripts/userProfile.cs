@@ -3,7 +3,7 @@ using System.Collections;
 
 public class userProfile : MonoBehaviour {
 
-	public float totalPoints = 0.0f;
+	public int totalPoints = 0;
 
 	public bool left_hand = true;
 	public bool right_hand = true;

@@ -10,6 +10,7 @@ public class RoundHandler : MonoBehaviour {
 
 	int curRound;
 	int maxRound;
+	bool canStillGetBonus;
 	public InstructionHandler instructionHandler;
 	//This array holds the correct overall sequence of 5 colors that will be used during
 	// 		 the whole game. The Instruction Handler will set these values.
@@ -19,11 +20,15 @@ public class RoundHandler : MonoBehaviour {
 	//An empty queue means that the player has pressed every button for that round, and 
 	//		that the next round will begin. 
 	public Queue<string> currentRoundCorrectButtonOrder = new Queue<string>();
-	public playScript playScript;
+	public gameManager pointManager;
+	public int[] roundPoints = new int[5];
+	public int roundPointsIndex;
 
 	// Use this for initialization
 	void Start () {
 		maxRound = 4;
+		roundPoints = new int[]{10, 20, 40, 75, 125};
+		roundPointsIndex = 0;
 	}
 	
 	// Update is called once per frame
@@ -38,13 +43,15 @@ public class RoundHandler : MonoBehaviour {
 		curRound = instructionHandler.GetComponent<InstructionHandler> ().currentRound;
 		//if you are restarting a round, clear the queue
 		if (restartingTheRound) {
+			canStillGetBonus = false;
 			currentRoundCorrectButtonOrder.Clear();
 		}
 		//if you are starting a new round, increase the curRound and make sure the queue is clear.
 		else {
 			curRound++;
+			canStillGetBonus = true;
 			if (curRound > maxRound) {
-				playScript.GetComponent<playScript>().EndElevatorGame();
+				pointManager.GetComponent<gameManager>().EndElevatorGame();
 			}
 			if (currentRoundCorrectButtonOrder.Count != 0) {
 				print ("error");
@@ -56,5 +63,14 @@ public class RoundHandler : MonoBehaviour {
 		}
 		//Tell the Instruction Handler to do what it should at the start of a round
 		instructionHandler.GetComponent<InstructionHandler> ().StartRound (restartingTheRound);
+	}
+
+	public void AddPoints() {
+		int pointsThisRound = roundPoints [roundPointsIndex];
+		if (canStillGetBonus) {
+			pointsThisRound += 50;
+		}
+		pointManager.GetComponent<gameManager> ().gamePoints += pointsThisRound;
+		roundPointsIndex++;
 	}
 }

@@ -43,11 +43,12 @@ public class ElevatorButton : MonoBehaviour {
 			string nextButton = roundHandler.GetComponent<RoundHandler>().currentRoundCorrectButtonOrder.Dequeue();
 			//if player pressed correct button:
 			if (nextButton == color) {
-				//if this was the last button that needed to be pressed then tell the Round Handler
-				//		to start the next round.
-				//passing "false" into StartRound() is indicating that this will be a new round 
-				//		instead of restarting this current round again
 				if(roundHandler.GetComponent<RoundHandler>().currentRoundCorrectButtonOrder.Count == 0){
+					roundHandler.GetComponent<RoundHandler>().AddPoints();
+					//if this was the last button that needed to be pressed then tell the Round Handler
+					//		to start the next round.
+					//passing "false" into StartRound() is indicating that this will be a new round 
+					//		instead of restarting this current round again
 					roundHandler.GetComponent<RoundHandler>().StartRound(false);
 				}
 			} 

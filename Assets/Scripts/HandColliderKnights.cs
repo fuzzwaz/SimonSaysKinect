@@ -50,7 +50,8 @@ public class HandColliderKnights : MonoBehaviour {
 
 	void OnCollisionEnter (Collision collision) {
 		if (collision.gameObject.tag == "Knight") {
-			print ("Game Over");
+			collision.gameObject.GetComponent<Knight>().hitByPlayer = true;
+			Destroy(collision.gameObject, 2f);
 		}
 	}
 }

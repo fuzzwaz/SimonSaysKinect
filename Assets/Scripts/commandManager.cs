@@ -25,13 +25,13 @@ public class commandManager : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 
-		//Correct Input has been recieved, update the points 
-		if (Input.GetKeyDown(KeyCode.C))
-		{pointManager.GetComponent<pointManager>().CorrectPlayerInput();}
-
-		//Incorrect Input has been recieved, update the points
-		if (Input.GetKeyDown(KeyCode.I))
-		{pointManager.GetComponent<pointManager>().IncorrectPlayerInput();}
+//		//Correct Input has been recieved, update the points 
+//		if (Input.GetKeyDown(KeyCode.C))
+//		{pointManager.GetComponent<gameManager>().CorrectPlayerInput();}
+//
+//		//Incorrect Input has been recieved, update the points
+//		if (Input.GetKeyDown(KeyCode.I))
+//		{pointManager.GetComponent<gameManager>().IncorrectPlayerInput();}
 
 		if (playing == false) {
 			timer += Time.deltaTime;
