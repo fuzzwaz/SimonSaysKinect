@@ -24,7 +24,6 @@ public class InstructionHandler : MonoBehaviour {
 	//These are references to the hand colliders in the game.
 	public GameObject handColliderR;
 	public GameObject handColliderL;
-	public playScript playScript;
 	public GameObject userProfile;
 
 	public int currentRound;

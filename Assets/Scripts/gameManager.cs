@@ -6,8 +6,8 @@ public class gameManager : MonoBehaviour {
 	
 	public string currentLevelName;
 	public Text playerPoints;
-	public Text playerInstruction;
-	public GameObject commandManager;
+//	public Text playerInstruction;
+//	public GameObject commandManager;
 	public int gamePoints;
 	public GameObject userProfile;
 	public bool paused;
