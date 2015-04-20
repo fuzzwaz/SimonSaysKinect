@@ -14,6 +14,6 @@ public class playScript : MonoBehaviour {
 	}
 
 	public void OnClick() {
-		Application.LoadLevel ("MainLevel_FlyingKnights");
+		Application.LoadLevel ("StageSelectionScreen");
 	}
 }

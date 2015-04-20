@@ -17,7 +17,7 @@ public class gameManager : MonoBehaviour {
 	void Start () {
 		paused = false;
 		userProfile = GameObject.Find("User_Profile");
-		gamePoints = userProfile.GetComponent<userProfile>().totalPoints;
+		gamePoints = (int)userProfile.GetComponent<userProfile>().totalPoints;
 		playerPoints.text = gamePoints.ToString ();
 		Invoke("EndKnightGame", 30f);
 	}
