@@ -15,6 +15,6 @@ public class PlayTreasure : MonoBehaviour {
 
 	public void OnClick ()
 	{
-		//Load Fruit
+		Application.LoadLevel ("MainLevel_FindTreasure");
 	}
 }

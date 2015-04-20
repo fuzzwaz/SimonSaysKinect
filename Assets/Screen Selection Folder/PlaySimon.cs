@@ -15,6 +15,6 @@ public class PlaySimon : MonoBehaviour {
 
 	public void OnClick ()
 	{
-		//Load Simon
+		Application.LoadLevel ("MainLevel_Elevator");
 	}
 }

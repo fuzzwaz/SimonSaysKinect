@@ -15,6 +15,6 @@ public class PlayFruit : MonoBehaviour {
 
 	public void OnClick ()
 	{
-		//Load Fruit
+		Application.LoadLevel ("Fruit_Game");
 	}
 }

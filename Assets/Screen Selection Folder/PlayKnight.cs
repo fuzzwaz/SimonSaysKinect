@@ -15,6 +15,6 @@ public class PlayKnight : MonoBehaviour {
 
 	public void OnClick ()
 	{
-		//Load Knight
+		Application.LoadLevel ("MainLevel_FlyingKnights");
 	}
 }

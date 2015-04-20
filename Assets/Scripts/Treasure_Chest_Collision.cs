@@ -16,28 +16,28 @@ public class Treasure_Chest_Collision : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		if ((counter == 0) && !isBeginning && !treasure_found) {
-			
-			print ("Shiver me timbers! You found the treasure!");
-			
-			treasure_found = true;
-		}
-	}
-
-	void OnTriggerEnter(Collider coll)
-	{
-		++counter;
-
-		isBeginning = false;
-
-		if (coll.gameObject.tag == "Coin_Copy" && !treasure_found)
+		if ((counter == 0) && !isBeginning && !treasure_found)
 		{
-			Rigidbody rigid_body = GetComponent<Rigidbody>();
+			treasure_found = true;
+			print ("done");
 		}
 	}
 
-	void OnTriggerExit(Collider coll)
-	{
-		--counter;
+	void OnTriggerEnter(Collider coll) {
+
+		if (coll.gameObject.tag == "Coin" && !treasure_found)
+		{
+			++counter;
+			isBeginning = false;
+		}
+	}
+
+	void OnTriggerExit(Collider coll){
+		
+		if (coll.gameObject.tag == "Coin" && !treasure_found)
+		{
+			--counter;
+		}
 	}
 }
+
