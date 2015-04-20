@@ -19,7 +19,7 @@ public class gameManager : MonoBehaviour {
 		userProfile = GameObject.Find("User_Profile");
 		gamePoints = (int)userProfile.GetComponent<userProfile>().totalPoints;
 		playerPoints.text = gamePoints.ToString ();
-		Invoke("EndKnightGame", 30f);
+		Invoke("EndKnightGame", 45f);
 	}
 	
 	// Update is called once per frame
