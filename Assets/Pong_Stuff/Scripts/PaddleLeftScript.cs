@@ -8,7 +8,7 @@ public class PaddleLeftScript : MonoBehaviour {
 	Rigidbody ballRigidbody;
 	
 	public GameObject carlMan;
-	public GameObject userProfile;
+	public GameObject profile;
 	public gameManager pointManager;
 
 	int lives = 4;
@@ -27,7 +27,14 @@ public class PaddleLeftScript : MonoBehaviour {
 		//DontDestroyOnLoad(GameObject.Find("guiLives"));
 		guiLives = GameObject.Find ("guiLives").GetComponent<GUIText> ();
 		guiScore = GameObject.Find ("guiScore").GetComponent<GUIText> ();
-		speed = 9;
+		
+		profile = GameObject.Find("User_Profile");
+		if(profile.GetComponent<userProfile>().knightHard){
+			speed = 13;
+		}
+		else{
+			speed = 9;
+		}
 		//hard - 13
 		SpawnBall ();
 		gameObject.SetActive (true);

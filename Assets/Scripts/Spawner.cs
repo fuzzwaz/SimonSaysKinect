@@ -9,11 +9,18 @@ public class Spawner : MonoBehaviour {
 	public gameManager pointManager;
 	public Transform handTransform;
 	public float forceVelocity;
+	public GameObject profile;
 
 	// Use this for initialization
 	void Start () {
 		Vector3[] dirVectors = new Vector3[4];
-		forceVelocity = Random.Range (150, 300);
+		profile = GameObject.Find("User_Profile");
+		if(profile.GetComponent<userProfile>().knightHard){
+			forceVelocity = Random.Range (200, 300);
+		}
+		else{
+			forceVelocity = Random.Range (75, 150);
+		}
 //		dirVectors [0] = new Vector3 (0, forceVelocity, 0);
 //		dirVectors [1] = new Vector3 (0, -forceVelocity, 0);
 //		dirVectors [2] = new Vector3 (-forceVelocity, 0, 0);

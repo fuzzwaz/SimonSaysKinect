@@ -2,10 +2,10 @@
 using System.Collections;
 
 public class Fruit : MonoBehaviour {
-	float speed, timer;
+	public float speed;
+	float timer;
 	// Use this for initialization
 	void Start () {
-		speed = 0.1f;
 		timer = Time.time;
 	}
 	

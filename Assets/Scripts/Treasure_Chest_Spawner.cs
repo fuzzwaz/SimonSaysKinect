@@ -13,9 +13,17 @@ public class Treasure_Chest_Spawner : MonoBehaviour {
 
 	public GameObject[] spawned_treasure_chests;
 	public gameManager pointManager;
+	public GameObject profile;
 
 	// Use this for initialization
 	void Start () {
+		profile = GameObject.Find("User_Profile");
+		if(profile.GetComponent<userProfile>().treasureHard){
+			number_of_treasure_chests = 5;
+		}
+		else{
+			number_of_treasure_chests = 3;
+		}
 		spawned_treasure_chests = new GameObject[number_of_treasure_chests];
 		Invoke ("Spawn_Multiple_Treasure_Chests", 0.5f);
 		// Randomize the position of the treasure chest when the game first starts
