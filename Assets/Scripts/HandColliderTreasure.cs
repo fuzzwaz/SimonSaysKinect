@@ -14,7 +14,7 @@ public class HandColliderTreasure : MonoBehaviour {
 		noRightHand = false;
 		noLeftHand = false;
 		gameObject.SetActive (false);
-		Invoke ("TurnOnHands", 10.2f);
+		Invoke ("TurnOnHands", 4.2f);
 	}
 	
 	// Update is called once per frame

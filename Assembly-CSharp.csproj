@@ -49,6 +49,11 @@
      <Compile Include="Assets\Fruit_Game_Stuff\Fruit.cs" />
      <Compile Include="Assets\Fruit_Game_Stuff\FruitSpawner.cs" />
      <Compile Include="Assets\Fruit_Game_Stuff\Head.cs" />
+     <Compile Include="Assets\Pong_Stuff\Scripts\BallScript.cs" />
+     <Compile Include="Assets\Pong_Stuff\Scripts\BrickScript.cs" />
+     <Compile Include="Assets\Pong_Stuff\Scripts\DeathFieldScript.cs" />
+     <Compile Include="Assets\Pong_Stuff\Scripts\PaddleLeftScript.cs" />
+     <Compile Include="Assets\Pong_Stuff\Scripts\PaddleRightScript.cs" />
      <Compile Include="Assets\Screen Selection Folder\PlayAll.cs" />
      <Compile Include="Assets\Screen Selection Folder\PlayFruit.cs" />
      <Compile Include="Assets\Screen Selection Folder\PlayKnight.cs" />
