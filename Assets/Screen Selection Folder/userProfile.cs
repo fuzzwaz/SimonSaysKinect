@@ -14,6 +14,8 @@ public class userProfile : MonoBehaviour {
 	public bool pongHard = false;
 	public bool fruitHard = false;
 	public bool treasureHard = false;
+
+	public bool playAll = false;
 	// Use this for initialization
 	void Start () {
 

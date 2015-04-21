@@ -2,6 +2,8 @@
 using System.Collections;
 
 public class PlayAll : MonoBehaviour {
+	
+	public GameObject profile;
 
 	// Use this for initialization
 	void Start () {
@@ -15,6 +17,15 @@ public class PlayAll : MonoBehaviour {
 
 	public void OnClick ()
 	{
-		//Play All
+		profile = GameObject.Find("User_Profile");
+		if (profile != null){
+			profile.GetComponent<userProfile>().playAll = true;
+			if(profile.GetComponent<userProfile>().left_hand || profile.GetComponent<userProfile>().right_hand){
+				Application.LoadLevel ("MainLevel_FlyingKnights");
+			}
+			else if(profile.GetComponent<userProfile>().head){
+				Application.LoadLevel ("MainLevel_Fruits");
+			}
+		}
 	}
 }

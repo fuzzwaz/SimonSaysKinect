@@ -15,6 +15,6 @@ public class PlayPong : MonoBehaviour {
 
 	public void OnClick ()
 	{
-		//Load Pong
+		Application.LoadLevel ("DualPong");
 	}
 }

@@ -1,20 +1,20 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\RoundHandler.cs">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\Treasure_Chest_Spawner.cs">
     <Files>
-      <File FileName="Assets\Scripts\gameManager.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\Coin_Spawner.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\Treasure_Chest_Spawner.cs" Line="1" Column="1" />
-      <File FileName="Assets\ZigFu\Scripts\UserEngagers\ZigEngageSingleUser.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\HandColliderTreasure.cs" Line="1" Column="1" />
+      <File FileName="Assets\Screen Selection Folder\PlayFruit.cs" Line="18" Column="43" />
+      <File FileName="Assets\Scripts\gameManager.cs" Line="92" Column="2" />
       <File FileName="Assets\Scripts\Treasure_Chest_Collision.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\Spawner.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\Knight.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\updateSettings.cs" Line="1" Column="1" />
-      <File FileName="Assets\Screen Selection Folder\userProfile.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\updateSettings.cs" Line="16" Column="17" />
+      <File FileName="Assets\Screen Selection Folder\userProfile.cs" Line="18" Column="30" />
       <File FileName="Assets\Scripts\commandManager.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\RoundHandler.cs" Line="48" Column="31" />
       <File FileName="Assets\Scripts\ElevatorButton.cs" Line="1" Column="1" />
+      <File FileName="Assets\Fruit_Game_Stuff\Head.cs" Line="18" Column="39" />
+      <File FileName="Assets\Screen Selection Folder\PlayAll.cs" Line="28" Column="5" />
+      <File FileName="Assets\Screen Selection Folder\PlayKnight.cs" Line="18" Column="50" />
+      <File FileName="Assets\Scripts\Treasure_Chest_Spawner.cs" Line="40" Column="1" />
+      <File FileName="Assets\Scripts\RoundHandler.cs" Line="57" Column="49" />
+      <File FileName="Assets\Screen Selection Folder\PlayPong.cs" Line="18" Column="38" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

@@ -20,6 +20,7 @@ public class gameManager : MonoBehaviour {
 		gamePoints = (int)userProfile.GetComponent<userProfile>().totalPoints;
 		playerPoints.text = gamePoints.ToString ();
 		Invoke("EndKnightGame", 45f);
+		Invoke ("EndFruitGame", 45f);
 	}
 	
 	// Update is called once per frame
@@ -31,17 +32,90 @@ public class gameManager : MonoBehaviour {
 		if (currentLevelName == "MainLevel_FlyingKnights") {
 			userProfile = GameObject.Find("User_Profile");
 			userProfile.GetComponent<userProfile>().totalPoints += gamePoints;
-			Application.LoadLevel ("MainLevel_Elevator");
-			currentLevelName = "MainLevel_Elevator";
+			if(userProfile.GetComponent<userProfile>().playAll){
+				Application.LoadLevel ("MainLevel_Elevator");
+				currentLevelName = "MainLevel_Elevator";
+			}
+			else{
+				Application.LoadLevel ("StageSelectionScreen");
+				currentLevelName = "StageSelectionScreen";
+			}
 		}
 	}
 	
 	public void EndElevatorGame() {
 		if (currentLevelName == "MainLevel_Elevator") {
 			userProfile = GameObject.Find("User_Profile");
-			userProfile.GetComponent<userProfile>().totalPoints = 0;
-			Application.LoadLevel ("TitleScreen");
-			currentLevelName = "TitleScreen";
+			userProfile.GetComponent<userProfile>().totalPoints += gamePoints;
+			if(userProfile.GetComponent<userProfile>().playAll){
+				if(userProfile.GetComponent<userProfile>().right_hand && userProfile.GetComponent<userProfile>().left_hand){
+					Application.LoadLevel("DualPong");
+					currentLevelName = "DualPong";
+				}
+				else if(userProfile.GetComponent<userProfile>().head){
+					Application.LoadLevel("MainLevel_Fruits");
+					currentLevelName = "MainLevel_Fruits";
+				}
+				else{
+					Application.LoadLevel("MainLevel_FindTreasure");
+					currentLevelName = "MainLevel_FindTreasure";
+				}
+			}
+			else{
+				Application.LoadLevel ("StageSelectionScreen");
+				currentLevelName = "StageSelectionScreen";
+			}
+		}
+	}
+	
+	public void EndPongGame() {
+		if (currentLevelName == "DualPong") {
+			userProfile = GameObject.Find("User_Profile");
+			userProfile.GetComponent<userProfile>().totalPoints += gamePoints;
+			if(userProfile.GetComponent<userProfile>().playAll){
+				if(userProfile.GetComponent<userProfile>().head){
+					Application.LoadLevel("MainLevel_Fruits");
+					currentLevelName = "MainLevel_Fruits";
+				}
+				else{
+					Application.LoadLevel("MainLevel_FindTreasure");
+					currentLevelName = "MainLevel_FindTreasure";
+				}
+			}
+			else{
+				Application.LoadLevel ("StageSelectionScreen");
+				currentLevelName = "StageSelectionScreen";
+			}
+		}
+	}
+	
+	void EndFruitGame() {
+		if (currentLevelName == "MainLevel_Fruits") {
+			userProfile = GameObject.Find("User_Profile");
+			userProfile.GetComponent<userProfile>().totalPoints += gamePoints;
+			if(userProfile.GetComponent<userProfile>().playAll){
+				if(userProfile.GetComponent<userProfile>().right_hand || userProfile.GetComponent<userProfile>().left_hand){
+					Application.LoadLevel("MainLevel_FindTreasure");
+					currentLevelName = "MainLevel_FindTreasure";
+				}
+				else{
+					Application.LoadLevel("StageSelectionScreen");
+					currentLevelName = "StageSelectionScreen";
+				}
+			}
+			else{
+				Application.LoadLevel ("StageSelectionScreen");
+				currentLevelName = "StageSelectionScreen";
+			}
+		}
+	}
+	
+	public void EndTreasureGame() {
+		if (currentLevelName == "MainLevel_FindTreasure") {
+			userProfile = GameObject.Find("User_Profile");
+			userProfile.GetComponent<userProfile>().totalPoints += gamePoints;
+			Application.LoadLevel ("StageSelectionScreen");
+			currentLevelName = "StageSelectionScreen";
 		}
 	}
 

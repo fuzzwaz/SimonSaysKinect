@@ -12,6 +12,7 @@ public class Treasure_Chest_Spawner : MonoBehaviour {
 	public GameObject treasure_chest_object;
 
 	public GameObject[] spawned_treasure_chests;
+	public gameManager pointManager;
 
 	// Use this for initialization
 	void Start () {
@@ -36,8 +37,7 @@ public class Treasure_Chest_Spawner : MonoBehaviour {
 				return;
 			}
 		}
-
-		print ("Shiver me timbers! You found the treasure!");
+		pointManager.GetComponent<gameManager> ().EndTreasureGame ();
 	}
 
 	void Spawn_Multiple_Treasure_Chests()
