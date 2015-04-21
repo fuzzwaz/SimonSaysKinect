@@ -6,12 +6,10 @@ public class updateSettings : MonoBehaviour {
 	public GameObject leftHand_Enabled;
 	public GameObject rightHand_Enabled;
 	public GameObject head_Enabled;
-	public GameObject torso_Enabled;
 
 	public GameObject leftHand_Disabled;
 	public GameObject rightHand_Disabled;
 	public GameObject head_Disabled;
-	public GameObject torso_Disabled;
 
 	public GameObject profile;
 	// Use this for initialization
@@ -36,12 +34,6 @@ public class updateSettings : MonoBehaviour {
 				head_Enabled.SetActive(false);
 				head_Disabled.SetActive(true);
 			}
-
-			if (profile.GetComponent<userProfile>().torso != true)
-			{
-				torso_Enabled.SetActive(false);
-				torso_Disabled.SetActive(true);
-			}
 		}
 	}
 	
@@ -64,12 +56,6 @@ public class updateSettings : MonoBehaviour {
 			{profile.GetComponent<userProfile>().head = true;}
 			else
 			{profile.GetComponent<userProfile>().head = false;}
-
-			if (torso_Enabled.activeSelf == true)
-			{profile.GetComponent<userProfile>().torso = true;
-			}
-			else
-			{profile.GetComponent<userProfile>().torso = false;}
 		}
 	
 	}

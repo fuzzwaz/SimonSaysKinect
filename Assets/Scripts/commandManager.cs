@@ -19,7 +19,7 @@ public class commandManager : MonoBehaviour {
 		commandSize = commands.Length;
 		if (pointManager == null)
 		{pointManager = GameObject.Find("Point_Manager");}
-		Invoke("GiveInstruction", 11f);
+		Invoke("GiveInstruction", 2f);
 	}
 	
 	// Update is called once per frame

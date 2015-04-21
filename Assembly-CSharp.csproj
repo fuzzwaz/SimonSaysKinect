@@ -74,6 +74,7 @@
      <Compile Include="Assets\Scripts\Treasure_Chest_Spawner.cs" />
      <Compile Include="Assets\Scripts\commandManager.cs" />
      <Compile Include="Assets\Scripts\commandVariables.cs" />
+     <Compile Include="Assets\Scripts\fiveswap.cs" />
      <Compile Include="Assets\Scripts\gameManager.cs" />
      <Compile Include="Assets\Scripts\gameStart.cs" />
      <Compile Include="Assets\Scripts\menuScript.cs" />

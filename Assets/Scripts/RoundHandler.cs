@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.UI;
 using System.Collections;
 using System.Collections.Generic;
 
@@ -8,6 +9,7 @@ public class RoundHandler : MonoBehaviour {
 	//It keeps track of the correct sequence of buttons to be pressed 
 	//		for each round. 
 
+	public GameObject wrongColor;
 	int curRound;
 	int maxRound;
 	bool canStillGetBonus;
@@ -43,6 +45,7 @@ public class RoundHandler : MonoBehaviour {
 		curRound = instructionHandler.GetComponent<InstructionHandler> ().currentRound;
 		//if you are restarting a round, clear the queue
 		if (restartingTheRound) {
+			wrongColor.SetActive(true);
 			canStillGetBonus = false;
 			currentRoundCorrectButtonOrder.Clear();
 		}

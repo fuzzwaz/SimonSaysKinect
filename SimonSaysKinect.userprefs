@@ -1,23 +1,20 @@
 ﻿<Properties>
-<<<<<<< HEAD
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\restart.cs">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\RoundHandler.cs">
     <Files>
-      <File FileName="Assets\Scripts\HandColliderTreasure.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\Coin_Spawner.cs" Line="1" Column="1" />
-      <File FileName="..\..\..\Downloads\Find_the_Treasure_Unity\New Unity Project\Assets\Coin_Collision.cs" Line="1" Column="1" />
-      <File FileName="..\..\..\Downloads\Find_the_Treasure_Unity\New Unity Project\Assets\Treasure_Chest_Collision.cs" Line="1" Column="1" />
       <File FileName="Assets\Scripts\gameManager.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\Coin_Spawner.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\Treasure_Chest_Spawner.cs" Line="1" Column="1" />
+      <File FileName="Assets\ZigFu\Scripts\UserEngagers\ZigEngageSingleUser.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\HandColliderTreasure.cs" Line="1" Column="1" />
       <File FileName="Assets\Scripts\Treasure_Chest_Collision.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\HandColliderKnights.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\Coin_Collision.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\restart.cs" Line="14" Column="43" />
-=======
-  <MonoDevelop.Ide.Workspace />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/userProfile.cs">
-    <Files>
-      <File FileName="Assets/Scripts/userProfile.cs" Line="1" Column="1" />
->>>>>>> origin/master
+      <File FileName="Assets\Scripts\Spawner.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\Knight.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\updateSettings.cs" Line="1" Column="1" />
+      <File FileName="Assets\Screen Selection Folder\userProfile.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\commandManager.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\RoundHandler.cs" Line="48" Column="31" />
+      <File FileName="Assets\Scripts\ElevatorButton.cs" Line="1" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
