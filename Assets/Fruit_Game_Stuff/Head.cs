@@ -15,7 +15,7 @@ public class Head : MonoBehaviour {
 	void Update () {
 
 		Vector3 myVec = transform.position;
-		myVec.x = headLoc.position.x*38 + 33;
+		myVec.x = headLoc.position.x*38 + 43;
 		transform.position = myVec;
 
 //		if (Input.GetKey(KeyCode.A)) {

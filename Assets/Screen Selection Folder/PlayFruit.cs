@@ -3,6 +3,8 @@ using System.Collections;
 
 public class PlayFruit : MonoBehaviour {
 
+	GameObject profile;
+
 	// Use this for initialization
 	void Start () {
 	
@@ -15,6 +17,10 @@ public class PlayFruit : MonoBehaviour {
 
 	public void OnClick ()
 	{
-		Application.LoadLevel ("MainLevel_Fruits");
+		profile = GameObject.Find("User_Profile");
+		if (profile != null){
+			profile.GetComponent<userProfile>().playAll = false;
+			Application.LoadLevel ("MainLevel_Fruits");
+		}
 	}
 }

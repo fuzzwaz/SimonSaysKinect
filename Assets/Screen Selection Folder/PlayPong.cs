@@ -2,6 +2,8 @@
 using System.Collections;
 
 public class PlayPong : MonoBehaviour {
+	
+	GameObject profile;
 
 	// Use this for initialization
 	void Start () {
@@ -15,6 +17,10 @@ public class PlayPong : MonoBehaviour {
 
 	public void OnClick ()
 	{
-		Application.LoadLevel ("DualPong");
+		profile = GameObject.Find("User_Profile");
+		if (profile != null){
+			profile.GetComponent<userProfile>().playAll = false;
+			Application.LoadLevel ("DualPong");
+		}
 	}
 }

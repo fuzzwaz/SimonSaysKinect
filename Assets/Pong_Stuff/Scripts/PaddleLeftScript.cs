@@ -11,7 +11,7 @@ public class PaddleLeftScript : MonoBehaviour {
 	public GameObject profile;
 	public gameManager pointManager;
 
-	int lives = 4;
+	int lives = 7;
 	int lastLevel = 1;
 	float speed;
 	GUIText guiLives;

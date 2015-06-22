@@ -52,7 +52,7 @@ public class Treasure_Chest_Spawner : MonoBehaviour {
 	{
 		for (int i = 0; i < number_of_treasure_chests; ++i)
 		{
-			spawned_treasure_chests[i] = (GameObject) Instantiate (treasure_chest_object, new Vector3(Random.Range (-9, 9), Random.Range (-5, 5), 1.5f), Quaternion.identity);
+			spawned_treasure_chests[i] = (GameObject) Instantiate (treasure_chest_object, new Vector3(Random.Range (-7, 7), Random.Range (-4, 4), 1.5f), Quaternion.identity);
 		}
 	}
 }
